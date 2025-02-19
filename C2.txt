@@ -14,3 +14,10 @@ a = b;
 b = c; 
 Console.Write("a = "+a+"\nb = "+b);
 
+Write C# program to read a 2-digit number and split the digits
+Console.Write("Enter two Digit Number : ");
+byte a = byte.Parse(Console.ReadLine());
+byte rem = (byte) (a%10);
+a = (byte)(a/10);
+Console.WriteLine("First digit "+a+"\nSecond digit "+rem);
+
