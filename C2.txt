@@ -1,0 +1,4 @@
+Write C# program to read name as input and display a welcome message
+Console.Write("Enter Your Name : ");
+String name = Console.ReadLine();
+Console.WriteLine("Welcome "+name);
