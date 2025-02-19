@@ -2,3 +2,6 @@ Write C# program to read name as input and display a welcome message
 Console.Write("Enter Your Name : ");
 String name = Console.ReadLine();
 Console.WriteLine("Welcome "+name);
+
+Write C# program to display your name and qualification in separate lines
+Console.Write("Muthukumaran\nB.E(ECE)");
