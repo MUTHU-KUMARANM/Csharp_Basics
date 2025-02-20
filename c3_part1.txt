@@ -1,0 +1,15 @@
+Write a program to check given number is Odd or even with runtime inputs.
+Console.Write("Enter a Number : ");
+int a = int.Parse(Console.ReadLine());
+if(a == 0)
+{
+    Console.WriteLine("0 is not ever and not odd");
+}
+else if(a % 2 == 0)
+{
+    Console.WriteLine("even");
+}
+else
+{
+    Console.WriteLine("odd");
+}
