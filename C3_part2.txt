@@ -1,2 +1,42 @@
 Write a program to print all numbers divisible by 2&3 between 1&50.
-
+for (int i = 1; i <= 50; i++)
+{
+    if (i % 2 == 0 && i % 3 == 0)
+    {
+        Console.WriteLine(i);
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Display number between 1 to 50
+If number id divisible by 3 then display as ‘Angry’
+If number id divisible by 5 then display as ‘Bird’
+If number id divisible by 3 & 5 then display as ‘Angry Bird’
+Otherwise display the number
+for (int i = 1; i <= 50; i++)
+{
+    if (i % 3 == 0 && i % 5 == 0)
+    {
+        Console.WriteLine("Angry Bird");
+    }
+    else if (i % 5 == 0)
+    {
+        Console.WriteLine("Bird");
+    }
+    else if (i % 3 == 0)
+    {
+        Console.WriteLine("Angry");
+    }
+    else
+    {
+        Console.WriteLine(i);
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Display Multiplication table for given number.
+Console.Write("enter a table  no : ");
+int no = int.Parse(Console.ReadLine());
+for (int i = 1; i <= 10; i++)
+{
+    Console.WriteLine(no + " * " + i + " = " + (no * i));
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
