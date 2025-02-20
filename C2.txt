@@ -7,7 +7,12 @@ Write C# program to display your name and qualification in separate lines
 Console.Write("Muthukumaran\nB.E(ECE)");
 
 Write C# program swap 2 numbers using arithmetic operators
-
+int a = 50;
+int b = 100;
+b = a + b;
+a = b - a ;
+b = b - a;
+Console.Write("a = " + a + "\nb = " + b);
 
 Write C# program to read a 2-digit number and split the digits
 Console.Write("Enter two Digit Number : ");
