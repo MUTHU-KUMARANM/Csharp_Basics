@@ -13,3 +13,62 @@ else
 {
     Console.WriteLine("odd");
 }
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Write a Program to Find the given char is Vowel or not for runtime inputs.
+Console.Write("Enter a Char : ");
+char ch = char.Parse(Console.ReadLine());
+if(ch == 'a' || ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' )
+{
+    Console.WriteLine("char is vowel");
+}
+else
+{
+    Console.WriteLine("char is not a vowel");
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+write a program to find the given number is positive or negative.
+Console.Write("Enter a number : ");
+int num = int.Parse(Console.ReadLine());
+if (num == 0)
+{
+    Console.WriteLine("0 is neither postive nor negative");
+}
+else if (num > 0)
+{
+    Console.WriteLine("postive");
+}
+else
+{
+    Console.WriteLine("negative");
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+write a program to find the year leap or not.
+Console.Write("Enter a year : ");
+int year = int.Parse(Console.ReadLine());
+if (year % 4 == 0)
+{
+    if (year % 100 == 0 && year % 400 == 0)
+    {
+        Console.WriteLine("its leap year");
+    }
+    else if (year % 100 != 0)
+    {
+        Console.WriteLine("its leap year");
+    }
+    else
+    {
+        Console.WriteLine("its not  leap year");
+    }
+}
+else
+{
+    Console.WriteLine("its not leap year");
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+write a program to change all negative numbers into positive.
+Console.Write("Enter a negative number : ");
+int Nnum = int.Parse(Console.ReadLine());
+int result = Nnum * (-1);
+Console.WriteLine(result);
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Write a program to Swap two numbers without arithmetic operator.
