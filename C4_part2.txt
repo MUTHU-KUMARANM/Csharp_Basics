@@ -1,0 +1,29 @@
+1. Write a program to perform basic calculations in calculator.
+Console.Write("enter a num1 : ");
+int num1 = int.Parse(Console.ReadLine());
+Console.Write("enter a num2 : ");
+int num2 = int.Parse(Console.ReadLine());
+Console.WriteLine("ENTER\n1.Add\n2.sub\n3.mul\n4.div");
+int op = int.Parse(Console.ReadLine());
+switch (op)
+{
+    case 1:
+        Console.WriteLine(num1 + num2);
+        break;
+    case 2:
+        Console.WriteLine(num1 - num2);
+        break;
+    case 3:
+        Console.WriteLine(num1 * num2);
+        break;
+    case 4:
+        Console.WriteLine(num1 / num2);
+        break;
+    default:
+        Console.WriteLine("invalid op");
+        break;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Write a program to get user inputs Name, Roll No , Percentage and Grade of
+student & display the output for the results pass or fail with average of the
+user.
