@@ -1,0 +1,61 @@
+1. Calculate Electricity Bill
+Units         Normal Charges Per Unit        Extra Charges
+<=100                     0                       -
+101 to 250                2                       25
+251 to 450                4                       75
+>450                      6                       100
+Console.Write("enter a unit : ");
+int unit = int.Parse(Console.ReadLine());
+if (unit > 0)
+{
+    if (unit <= 100)
+    {
+        Console.WriteLine("0");
+    }
+    else if (unit > 100 && unit <= 250)
+    {
+        Console.WriteLine((unit - 100) * 2 + 25);
+    }
+    else if (unit > 250 && unit <= 450)
+    {
+        Console.WriteLine((unit - 250) * 4 + 400);
+    }
+    else 
+    {
+        Console.WriteLine((unit - 450) * 6 + 1300);
+    }
+}
+else
+{
+    Console.WriteLine("invalid unit");
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a Program to Calculate Grade for Students Percentage
+Percentage          Grade
+>=85                 A
+>=75 & <85           B
+>=65 & <75           C
+<65                  D
+Console.Write("enter a percentage : ");
+int percentage = int.Parse(Console.ReadLine());
+if (percentage >= 85)
+{
+    Console.WriteLine("A");
+}
+else if (percentage >= 75 && percentage < 85)
+{
+    Console.WriteLine("B");
+}
+else if (percentage >=65 && percentage < 75)
+{
+    Console.WriteLine("C");
+}
+else if (percentage < 65 && percentage >=0) 
+{
+    Console.WriteLine("D");
+}
+else
+{
+    Console.WriteLine("invalid percentage");
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
