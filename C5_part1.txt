@@ -128,3 +128,28 @@ for (int i = 0; i <= n; i++)
 }
 Console.WriteLine(arr[n - 1]);
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Develop a program that:
+a. Accepts an array of 10 integers from the user (which may include positive and
+negative numbers).
+b. Counts and displays the number of positive and negative numbers in the array.
+int[] arr = new int[10];
+Console.Write("Enter element arr : ");
+int npe = 0;
+int nne = 0;
+for (int i = 0; i < arr.Length; i++)
+{
+    arr[i] = int .Parse(Console.ReadLine());
+}
+for (int i = 0; i < arr.Length; i++)
+{
+    if (arr[i] > 0)
+    { 
+        npe++;
+    }
+    else
+    {
+        nne++;
+    }
+}
+Console.WriteLine("npe : " + npe + "\nnne : " + nne);
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
