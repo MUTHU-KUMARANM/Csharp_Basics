@@ -1,3 +1,130 @@
 1. Create a program that:
 a. Accepts an array of n distinct integers in a specific range (e.g., from 1 to n).
 b. Identifies and displays the missing element from the range.
+Test Cases:
+  Enter the size of the array: 5
+  Enter the elements of the array: 1 2 4 5 6
+  The missing number is: 3
+  Enter the size of the array: 4
+  Enter the elements of the array: 1 2 4 5
+  The missing number is: 3
+Console.Write("Enter Size of arr : ");
+int n = int .Parse(Console.ReadLine());
+int[] arr = new int[n];
+Console.WriteLine("enter arr elements : ");
+for (int i = 0; i < n; i++)
+{
+    arr[i] = int.Parse(Console.ReadLine());
+}
+for (int i = 1; i <= n; i++)
+{
+    int flag = 0;
+    for (int j = 0; j < n; j++)
+    {
+        if (i == arr[j])
+        {
+            flag++;
+            break;
+        }
+    }
+    if (flag == 0)
+    {
+        Console.WriteLine("the missing number is " + i);
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Create a C# program that:
+a. Accepts an array of n integers from the user.
+b. Asks the user to enter an element to delete.
+c. Deletes the element if it exists in the array, and shifts the remaining elements.
+d. Displays the updated array.
+● Test case 1:
+Enter the size of the array: 5
+Enter the elements of the array: 10 20 30 40 50
+Enter the element to delete: 30
+Output: Updated array after deletion: 10 20 40 50
+● Test case 2:
+Enter the size of the array: 6
+Enter the elements of the array: 1 2 3 4 5 6
+Enter the element to delete: 1
+Output: Updated array after deletion: 2 3 4 5 6
+● Test case 3:
+Enter the size of the array: 4
+Enter the elements of the array: 15 25 35 45
+Enter the element to delete: 60
+Output: Element not found in the array.
+Console.Write("Enter Size of arr : ");
+Console.Write("Enter Size of arr : ");
+int n = int .Parse(Console.ReadLine());
+int[] arr = new int[n];
+Console.WriteLine("enter arr elements : ");
+for (int i = 0; i < n; i++)
+{
+    arr[i] = int.Parse(Console.ReadLine());
+}
+Console.Write("Enter a element to delete : ");
+int del = int.Parse(Console.ReadLine());
+int flag = 0;
+for (int i = 0; i < n; i++)
+{
+    if (del == arr[i])
+    {
+        flag = 1;
+        for (int j = i; j < n; j++)
+        {
+            if (j < n - 1)
+            {
+                arr[j] = arr[j + 1];
+            }
+        }
+        for (int k = 0; k < n - 1; k++)
+        {
+            Console.Write(arr[k] + " ");
+        }
+    }
+}
+if (flag == 0)
+{
+    Console.WriteLine("Element not found in the array");
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Develop a program that:
+a. Accepts an array of n integers from the user.
+b. Removes any duplicate elements from the array.
+c. Displays the array with unique elements only.
+Console.Write("Enter size of the arr : ");
+int n = int .Parse(Console.ReadLine());
+int[] arr = new int[n];
+int[] uarr = new int[100];
+int k = 0;
+Console.WriteLine("enter elements of arr : ");
+for (int i = 0; i < n; i++)
+{
+    arr[i] = int .Parse(Console.ReadLine());
+}
+for (int i = 0;i < n; i++)
+{
+    int flag = 0;
+    for (int j = i+1; j < n; j++)
+    {
+        if (arr[i] == arr[j])
+        {
+            flag++;
+            break;
+        }
+    }
+    if (flag == 0)
+    {
+        k++;
+        uarr[k] = arr[i];
+    }
+}
+for (int i = 0; i <= n; i++)
+{
+    if (uarr[i] != 0 && uarr[i+1] != 0)
+    {
+        Console.Write(uarr[i] + " ");
+    }
+}
+Console.WriteLine(arr[n - 1]);
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
