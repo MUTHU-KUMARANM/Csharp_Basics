@@ -59,3 +59,80 @@ else
     Console.WriteLine("invalid percentage");
 }
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+C# Arrays
+1. Write a C# program to:
+a. Declare an integer array of size 10.
+b. Accept 10 values from the user and store them in the array.
+c. Display the array elements.
+d. Find and display the largest and smallest numbers in the array.
+int[] arr = new int[10];
+Console.WriteLine("Enter arr element");
+for (int i = 0; i < arr.Length; i++)
+{
+    arr[i] = int.Parse(Console.ReadLine());
+}
+int min = arr[0];
+int max = arr[0];
+for (int i = 0; i < arr.Length; i++)
+{
+    Console.Write(arr[i] + " ");
+    if (min > arr[i])
+    {
+        min = arr[i];
+    }
+    else if(max < arr[i])
+    {
+        max = arr[i];
+    }
+    else
+    {
+        continue;
+    }
+}
+Console.WriteLine("\nmin : "+min+"\nmax : "+max);
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Create a C# program that:
+a. Takes an array of n integers as input.
+b. Finds and displays the sum of all elements in the array.
+c. Calculates and displays the average of the array elements.
+Console.Write("Enter size of arr : ");
+int n = int .Parse(Console.ReadLine());
+int[] arr = new int[n];
+int sum = 0;
+Console.WriteLine("Enter arr element");
+for (int i = 0; i < n; i++)
+{
+    arr[i] = int .Parse(Console.ReadLine());
+    sum = sum + arr[i];
+}
+Console.WriteLine("sum : "+sum +"\naverage : "+(sum / n));
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a program that:
+a. Takes 10 integer inputs from the user.
+b. Sorts the array in ascending order.
+c. Displays the sorted array.
+int[] arr = new int[10];
+int temp ;
+Console.WriteLine("Enter arr element");
+for (int i = 0; i < 10; i++)
+{
+    arr[i] = int.Parse(Console.ReadLine());
+}
+for (int i = 0; i < 10; i++)
+{
+    for (int j = i+1; j < 10; j++)
+    {
+        if (arr[i] > arr[j])
+        {
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+}  
+for (int i = 0;i < 10; i++)
+{
+    Console.Write(arr[i]+" ");
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
