@@ -152,4 +152,106 @@ for (int i = 0; i < arr.Length; i++)
     }
 }
 Console.WriteLine("npe : " + npe + "\nnne : " + nne);
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Write a program to find the second largest number in an array.
+Console.Write("enter arr size : ");
+int n  = int.Parse(Console.ReadLine());
+int[] arr = new int[n];
+Console.WriteLine("enter arr elements");
+for (int i = 0; i < n; i++)
+{
+    arr[i] = int.Parse(Console.ReadLine());
+}
+int temp;
+for (int i = 0;i < n; i++)
+{
+    for (int j = i+1; j < n; j++)
+    {
+        if (arr[i] > arr[j])
+        {
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+}
+Console.WriteLine(arr[n - 2]);
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Write a program to find in given array
+i) Sum of even numbers.
+ii) Sum of odd numbers.
+Console.Write("enter arr size : ");
+int n  = int.Parse(Console.ReadLine());
+int[] arr = new int[n];
+Console.WriteLine("enter arr elements");
+for (int i = 0; i < n; i++)
+{
+    arr[i] = int.Parse(Console.ReadLine());
+}
+int so = 0;
+int se = 0;
+for (int i = 0;i < n; i++)
+{
+   if(arr[i] % 2 == 0)
+    {
+        se = se + arr[i];
+    }
+    else
+    {
+        so = so + arr[i];
+    }
+}
+Console.WriteLine("se : "+se+"so : "+so);
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a program to calculate the following output
+Input:[8,9,2,5,6,4] output:[1,7,3,1,2]
+Console.Write("enter arr size : ");
+int n  = int.Parse(Console.ReadLine());
+int[] iarr = new int[n];
+Console.WriteLine("enter arr elements");
+int[] oarr = new int[n-1];
+for (int i = 0; i < n; i++)
+{
+    iarr[i] = int.Parse(Console.ReadLine());
+}
+int diff;
+for (int i = 0;i < n-1; i++)
+{
+    diff = iarr[i] - iarr[i + 1];
+    if (diff < 0)
+    {
+        diff = diff * -1;
+        oarr[i] = diff;
+    }
+    else
+    {
+        oarr[i] = diff;
+    }
+}
+for (int i = 0;i < oarr.Length;i++)
+{
+    Console.Write(oarr[i]+" ");
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Write a program to display index or position of given number in given array
+Array input:[89,45,23,12,45],n=45
+Output: Position of 45 is 1
+Console.Write("enter arr size : ");
+int n  = int.Parse(Console.ReadLine());
+int[] arr = new int[n];
+Console.WriteLine("enter arr elements");
+for (int i = 0; i < n; i++)
+{
+    arr[i] = int.Parse(Console.ReadLine());
+}
+Console.Write("enter a number to find thier postion : ");
+int num = int.Parse(Console.ReadLine());
+for (int i = 0;i < n-1; i++)
+{
+    if (arr[i] == num)
+    {
+        Console.WriteLine("Position of " + num + " is " +i);
+        break;
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
