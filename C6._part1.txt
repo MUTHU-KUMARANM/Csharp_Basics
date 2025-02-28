@@ -1,1 +1,59 @@
 1. Write a program to display the series[2,15,41,80,132,197………]
+Console.Write("enter arr size : ");
+int n  = int.Parse(Console.ReadLine());
+int num = 2;
+Console.Write(num+" ");
+for (int i = 1; i <= n-1; i++)
+{
+    num = num +(i*13);
+    Console.Write(num + " ");
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Display prime number between 1 to n.
+Console.Write("enter arr size : ");
+int n  = int.Parse(Console.ReadLine());
+int fact;
+for (int i = 1; i <= n; i++)
+{
+    fact = 0;
+    for (int j = 1; j <= (i/2); j++)
+    {
+        if (i % j == 0)
+        {
+            fact++;
+        }
+    }
+    if(fact == 0 || fact == 1)
+    {
+        Console.Write(i+" ");
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Display the given number is Strong or not
+N=15-> [1!+5!]=[1+120]=121 not equal to 15 so number is not strong
+N=145-> [1!+4!+5!]=[1+24+120]=145 equal to 145 so number is strong
+Console.Write("enter arr size : ");
+int n  = int.Parse(Console.ReadLine());
+int dum = n;
+int rem;
+int sum = 0;
+while (dum > 0)
+{
+    rem = dum % 10;
+    int fact = 1;
+    for (int i = 1; i <= rem; i++)
+    {
+        fact = fact *  i;
+    }
+    sum += fact;
+    dum = dum / 10;
+}
+if (sum == n)
+{
+    Console.WriteLine("Given Number is Strong");
+}
+else
+{
+    Console.WriteLine("not strong");
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
