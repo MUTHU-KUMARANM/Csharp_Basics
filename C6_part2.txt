@@ -36,4 +36,28 @@ for (int i = 0; i < n; i++)
 }
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 3. Write a program to find weather the given array is consecutive (or) not.
+Console.Write("enter arr size : ");
+int n = int.Parse(Console.ReadLine());
+int[] arr = new int[n];
+for (int i = 0; i < n; i++)
+{
+    arr[i] = int .Parse(Console.ReadLine());
+}
+int flag = 1;
+for (int i = 0;i < n-1; i++)
+{
+    if (arr[i]+1 != arr[i+1])
+    {
+        Console.WriteLine("arr is not consecutive");
+        break;
+    }
+    else
+    {
+        flag++;
+    }
+}
+if (flag == n)
+{
+    Console.WriteLine("arr is consecutive");
+}
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
