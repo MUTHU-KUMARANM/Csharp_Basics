@@ -58,3 +58,61 @@ for (int i = 0; i < n; i++)
     }
 }
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+distant vector protocol.
+Console.Write("enter no of cities : ");
+int n = int .Parse(Console.ReadLine());
+Console.Write("enter arr size : ");
+int m = int.Parse(Console.ReadLine());
+int[] arr = new int[m];
+Console.WriteLine("enter arr elements : ");
+for (int i = 0; i < m; i++)
+{
+    arr[i] = int.Parse(Console.ReadLine());
+}
+int diffm = 0;
+int diff1;
+for (int i = 0; i < n; i++)
+{
+    int f = 0;
+    for(int k  = 0; k < m; k++)
+    {
+        if (i == arr[k])
+        {
+            f = 1;
+            break;
+        }
+    }
+    if (f != 1)
+    {
+        int diff2 = 0;
+        for (int j = 0; j < m; j++)
+        {
+            diff1 = i - arr[j];
+            if (j == 0)
+            {
+                if (diff1 < 0)
+                {
+                    diff1 = diff1 * -1;
+                }
+                diff2 = diff1;
+            }
+            else
+            {
+                if (diff1 < 0)
+                {
+                    diff1 = diff1 * -1;
+                }
+                if (diff1 < diff2)
+                {
+                    diff2 = diff1;
+                }
+            }
+        }
+        if( diff2 > diffm )
+        {
+            diffm = diff2;
+        }
+    }
+}
+Console.WriteLine(diffm);
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
