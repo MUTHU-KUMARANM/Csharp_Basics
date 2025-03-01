@@ -116,3 +116,40 @@ for (int i = 0; i < n; i++)
 }
 Console.WriteLine(diffm);
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Super Reduced String.
+Console.Write("enter a string : ");
+string s  = Console.ReadLine();
+string res = "";
+for (int i = 0;i < s.Length;i++)
+{
+    int flag = 0;
+    for (int j = i+1;j < s.Length;j++)
+    {
+        if (s[i] == s[j])
+        {
+            flag++;
+        }
+    }
+    if (flag == 0)
+    {
+        res += s[i];
+    }
+}
+string result = "";
+for (int i = 0; i < res.Length;i++)
+{
+    int flag = 0;
+    for (int j = 0; j < s.Length;j++)
+    {
+        if (res[i] == s[j])
+        {
+            flag++;
+        }
+    }
+    if(flag % 2 != 0)
+    {
+        result += res[i];
+    }
+}
+Console.Write("\n"+result+"\n");
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
