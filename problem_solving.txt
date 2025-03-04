@@ -181,3 +181,87 @@ for(int i = 0; i < a.Length; i++)
 }
 Console.WriteLine(sum);
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Two Characters.(beabeefeab)
+Console.Write("Enter a string : ");
+String s = Console.ReadLine();
+string os = "";
+for  (int i = 0;i < s.Length;i++)
+{
+    int f = 0;
+    int j;
+    for (j = i+1;j < s.Length;j++)
+    {
+        if (s[i] == s[j])
+        {
+            f = 1;
+            break;
+        }
+    }
+    if (f == 0)
+    {
+        os = os + s[i];
+    }
+}
+int max = 0;
+for(int i  = 0;i < os.Length; i++)
+{
+    for (int j = i+1; j < os.Length; j++)
+    {
+        int num1 = 0;
+        for (int k = 0;   k < s.Length; k++)
+        {
+            if (os[i] == s[k])
+            {
+                num1++;
+                while (k<s.Length)
+                {
+                    if (os[j] == s[k])
+                    {
+                        num1++;
+                        break;
+                    }
+                    else
+                    {
+                        k++;
+                    }
+                }
+            }
+        }
+        int num2 = 0;
+        for (int l = 0; l < s.Length; l++)
+        {
+            if (os[j] == s[l])
+            {
+                num2++;
+                while (l < s.Length)
+                {
+                    if (os[i] == s[l])
+                    {
+                        num2++;
+                        break;
+                    }
+                    else
+                    {
+                        l++;
+                    }
+                }
+            }
+        }
+        if (num2 > num1)
+        {
+            if(num2 > max)
+            {
+                max = num2;
+            }
+        }
+        else
+        {
+            if(num1 > max)
+            { 
+                max = num1;
+            }
+        }
+    }
+}
+Console.WriteLine(max);
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
