@@ -1,0 +1,2 @@
+1. Write a program to arrange array values in ascending order using functions
+Input : {5,1,3,4,2} Output:{1,2,3,4,5}
