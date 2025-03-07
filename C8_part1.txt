@@ -1,0 +1,1 @@
+1. Write C# Program with functions for finding sum, difference, product and quotient. All functions should take 2 numbers as input and return one integer.
