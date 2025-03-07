@@ -1,1 +1,106 @@
 1. Write C# Program with functions for finding sum, difference, product and quotient. All functions should take 2 numbers as input and return one integer.
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        public void add()
+        {
+            int a = 20;
+            int b = 10; 
+            Console.WriteLine("add : "+(a+b));
+        }
+        public void sub(int a,int b)
+        {
+            Console.WriteLine("sub : "+(a-b));
+        }
+        public int mul()
+        {
+            int a = 20;
+            int b = 10;
+            return a * b;
+        }
+        public int div(int a,int b)
+        {
+            return a / b;
+        }
+        static void Main(string[] args)
+        {
+            Program operation = new Program ();
+            Console.WriteLine("operation on 20 & 10 :-");
+            operation.add();
+            operation.sub(20,10);
+            Console.WriteLine("mul : "+operation.mul());
+            Console.WriteLine("div : "+operation.div(20,10));
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Write program to display largest prime number between 1 to n using functions
+  Input : n=10 Output : Largest Prime number is 7
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        public int prime(int x)
+        {
+            int prime = 1;
+            for (int i = 1; i < x; i++)
+            {
+                int temp = 0;
+                for (int j = 1; j < (i/2); j++)
+                {
+                    if (i % j == 0)
+                    {
+                        temp++;
+                    }
+
+                }
+                if(temp == 1)
+                {
+                    if(i > prime)
+                    {
+                        prime = i;
+                    }
+                }
+            }
+            return prime;
+        }
+        static void Main(string[] args)
+        {
+            Console.Write("enter n : ");
+            int a = int .Parse(Console.ReadLine());
+            Program prime = new Program();
+            Console.WriteLine(prime.prime(a));
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a program to find reverse of given string using functions but without loop
+Input : Welcome Output: emocleW
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        string b = "";
+        public string Reverse(string a, int n)
+        {
+            if (n > 0)
+            {
+                b = b + a[(n - 1)];
+                return Reverse(a, n - 1);
+            }
+            else
+            {
+                return b;
+            }
+        }
+        static void Main(string[] args)
+        {
+            Console.Write("enter a string : ");
+            string x = Console.ReadLine();
+            Program reverse = new Program();
+            Console.Write(reverse.Reverse(x,x.Length));
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
