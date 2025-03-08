@@ -1,5 +1,35 @@
 1. Write a program to arrange array values in ascending order using functions
 Input : {5,1,3,4,2} Output:{1,2,3,4,5}
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2. Find the factorial of a given number without using loop (recursive method)
 Input : 5 Output: 120
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Find the Sum of Digits for a given number without using loop (recursive method)
+Input : 12345 Output : 15 Hint : 1+2+3+4+5=15
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        int sum = 0;
+        public int SumOfDigits(int x)
+        {
+            int rem = 0;
+            if (x > 0)
+            {
+                rem = x % 10;
+                sum = sum + rem;
+                x = x / 10; 
+                return SumOfDigits(x);
+            }
+            else
+            {
+                return sum;
+            }
+        }
+        static void Main(string[] args)
+        {
+            Program sums = new Program();
+            Console.WriteLine(sums.SumOfDigits(12345));
+        }
+    }
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
