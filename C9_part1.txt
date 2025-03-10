@@ -1,0 +1,140 @@
+1. Simple Interest Calculator
+Create a class SimpleInterestCalculator that stores the principal amount, rate of interest,and time in years.
+Add a method to calculate the simple interest (SI = P * R * T / 100) and display the calculated interest.
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        class SimpleInterestCalculator()
+        {
+            public int sic(int principal , int interest , int years)
+            {
+                int si;
+                si = (principal * interest * years ) / 100;
+                return si;
+            }
+        }
+        static void Main(string[] args)
+        {
+            SimpleInterestCalculator calc = new SimpleInterestCalculator();
+            Console.Write("Enter a principle : ");
+            int principal = int.Parse(Console.ReadLine());
+            Console.Write("Enter   a interest : ");
+            int interest = int.Parse(Console.ReadLine());
+            Console.Write("Enter a years : ");
+            int years = int.Parse(Console.ReadLine());
+            Console.WriteLine(calc.sic(principal, interest, years));
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Book Management system
+Create a class Book that stores information about a book like title, author, and price. Add
+methods to input the details, calculate a discount on the book (e.g., 10% discount), and
+display the books details including the discounted price.
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        class Book()
+        {
+            public void infos(string title, string author, double price,double discount)
+            {
+                Console.WriteLine("Book info ");
+                Console.WriteLine("title name     : " + title);
+                Console.WriteLine("author name    : " + author);
+                Console.WriteLine("Original Price : " + price);
+                Console.WriteLine("discount Price : " +dp(discount, price));
+            }
+            public void deails()
+            {
+                Console.Write("Enter Book Name    : ");
+                string title = Console.ReadLine();
+                Console.Write("Enter Author Name  : ");
+                string author = Console.ReadLine();
+                Console.Write("Enter price amount : ");
+                double price = int.Parse(Console.ReadLine());
+                Console.Write("Enter discount%    : ");
+                double discount = int.Parse(Console.ReadLine());
+                infos(title, author, price, discount);
+
+            }
+            public double dp(double discount, double price)
+            {
+                double a = (price * discount) / 100;
+                double b = price - a;
+                return b;
+            }
+            static void Main(string[] args)
+            {
+                Book books = new Book();
+                books.deails();
+            }
+        }
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Create a Student class to model the information of students in a school. The class should
+contain properties such as Name, StudentId, and Grade, and methods to perform actions
+like enrolling a student, updating their grade, and displaying their details.
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        class student()
+        {
+            int n =0;
+            public string infos(string Name, int StudentID, string grade)
+            {
+                Console.WriteLine("Book info ");
+                Console.WriteLine("Student name     : " + Name);
+                Console.WriteLine("StudentID        : " + StudentID);
+                Console.WriteLine("Student grade    : " + grade);
+                if(n == 0)
+                {
+                    n = n+1;
+                    Console.Write("want to chnage the grade (yes/no): ");
+                    string a = Console.ReadLine();
+                    if (a == "yes")
+                    {
+                        grade = changedgrade();
+                        return infos(Name, StudentID, grade);
+                    }
+                    else
+                    {
+                        return " ";
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("details are updated");
+                    return " ";
+                }
+            }
+            public void deails()
+            {
+                Console.Write("Enter student Name    : ");
+                string Name = Console.ReadLine();
+                Console.Write("Enter StudentID Name  : ");
+                int StudentID = int.Parse(Console.ReadLine());
+                Console.Write("Enter student grade   : ");
+                string grade = (Console.ReadLine());
+                infos(Name, StudentID, grade);
+
+            }
+            public string changedgrade()
+            {
+                Console.Write("updated grade : ");
+                string newgrade = Console.ReadLine();
+                return newgrade;
+
+            }
+            static void Main(string[] args)
+            {
+               student student = new student();
+                student.deails();
+            }
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
