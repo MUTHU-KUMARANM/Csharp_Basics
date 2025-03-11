@@ -59,3 +59,76 @@ namespace ConsoleApp4
     }
 }
 --------------------------------------------------------------------------------------------------------------------------------------------------------
+2.Create a class called Student with following Members in Class
+Variables:                        Methods:
+Name                   Getnfo-- set all the information Student
+RNo                    CalaculateGrade–Find grade based on mark
+TotalMarks             ShowDetails()-returns all the information about Student.
+Nofof Subjects
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+       class Student()
+        {
+            public void info()
+            {
+                Console.Write("Name      : ");
+                string Name = Console.ReadLine();
+                Console.Write("roll no   : ");
+                long RNo = long.Parse(Console.ReadLine());
+                Console.Write("totalMark : ");
+                int Tm= int.Parse(Console.ReadLine());
+                Console.Write("No of sub : ");
+                int nos = int.Parse(Console.ReadLine());
+                display(Name, RNo, Tm, nos);
+            }
+            public char  grade(int Tm, int nos )
+            {
+                int n = Tm / nos;
+                char g;
+                if( n >= 90)
+                {
+                    g = 'A';
+                }
+                else if ( n >= 80)
+                {
+                    g = 'B';
+                }
+                else if( n >= 70)
+                {
+                    g = 'C';
+                }
+                else if (n >= 60)
+                {
+                    g = 'D';
+                }
+                else if( n>=50 )
+                {
+                    g = 'E';
+                }
+                else
+                {
+                    g = 'F';
+                }
+                return g;
+            }
+            public void display(string Name, long RNo,int Tm,int nos )
+            {
+                Console.WriteLine("Student Details ");
+                Console.WriteLine("Name      : "+Name);
+                Console.WriteLine("roll no   : "+RNo);
+                Console.WriteLine("totalMark : "+Tm);
+                Console.WriteLine("No of sub : "+nos);
+                Console.WriteLine("Grade     : "+grade(Tm, nos ));
+            }
+            
+            static void Main(string[] args)
+            {
+                Student student = new Student();
+                student.info();
+            }
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------
