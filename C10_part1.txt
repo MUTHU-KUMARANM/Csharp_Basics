@@ -1,0 +1,25 @@
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        class Member
+        {
+            public string Name;
+            public int Age;
+            public long Phonenumber;
+            public string Address;
+            public int Salary;
+            public void printsalary(int salary)
+            {
+                this.Salary = salary;
+                Console.WriteLine("salary : "+salary);
+            }
+
+        }
+        static void Main(string[] args)
+        {  
+            Member member = new Member();
+            member.printsalary(22000);
+        }
+    }
+}
