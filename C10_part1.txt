@@ -1,3 +1,12 @@
+1. Create a class named &#39;Member&#39; having the following members:
+Data members:
+Name
+Age
+Phone number
+Address
+Salary
+Methods:
+printSalary-which prints the salary of the members.
 namespace ConsoleApp4
 {
     internal class Program
