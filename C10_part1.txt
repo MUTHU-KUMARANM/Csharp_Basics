@@ -32,3 +32,63 @@ namespace ConsoleApp4
         }
     }
 }
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Create Two classes &#39;Employee&#39; and &#39;Manager&#39; inherits the &#39;Member&#39; class.
+The &#39;Employee&#39; and &#39;Manager&#39; classes have data members &#39;specialization&#39;
+and &#39;department&#39; respectively.
+Assign name, age, phone number, address and salary to an employee and a
+manager by making an object of both of these classes and print the same.
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        class Member
+        {
+            public string Name;
+            public int Age;
+            public long Phonenumber;
+            public string Address;
+            public int Salary;
+            public void printsalary(int salary)
+            {
+                this.Salary = salary;
+                Console.WriteLine("salary : "+salary);
+            }
+
+        }
+        class Employee : Member
+        {
+            public string specialization;
+            public void printdetails(string Name ,int Age , long Phonenumber,string Address,int salary,string specialization)
+            {
+                Console.WriteLine(this.Name = Name);
+                Console.WriteLine(this.Age = Age);
+                Console.WriteLine(this.Phonenumber = Phonenumber);
+                Console.WriteLine(this.Address = Address);
+                Console.WriteLine(this.Salary = salary);
+                Console.WriteLine(this.specialization = specialization);
+            }
+        }
+        class Manager : Member
+        {
+            public string department;
+            public void printdetails(string Name, int Age, long Phonenumber, string Address, int salary, string specialization)
+            {
+                Console.WriteLine(this.Name = Name);
+                Console.WriteLine(this.Age = Age);
+                Console.WriteLine(this.Phonenumber = Phonenumber);
+                Console.WriteLine(this.Address = Address);
+                Console.WriteLine(this.Salary = salary);
+                Console.WriteLine(this.department = specialization);
+            }
+        }
+        static void Main(string[] args)
+        {  
+            Manager manager = new Manager();
+            manager.printdetails("jai", 22, 9087138108, "valasaravakkam", 240000, "pshio");
+            Employee employee = new Employee();
+            employee.printdetails("Muthu", 23, 8939737176, "ramapuram", 20000, "software developer");
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
