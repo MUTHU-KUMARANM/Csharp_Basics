@@ -3,3 +3,83 @@ Create a class Book that has properties for Title, Author, ISBN, and Price. Use 
 Requirements:
 ● Use a constructor to initialize the properties.
 ● Create a method to display book details
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        class Book
+        {
+            public string Title;
+            public string Author;
+            public string ISBN;
+            public int Price;
+            public Book()
+            {
+                Title = "C#";
+                Author = "Muthukumaran";
+                ISBN = "978-3-16-148410-0";
+                Price = 3000; 
+            }
+            public void dd()
+            {
+                Console.WriteLine(Title);
+                Console.WriteLine(Author);
+                Console.WriteLine(ISBN);
+                Console.WriteLine(Price);
+            }
+        }
+        static void Main(string[] args)
+        {
+            Book book = new Book();
+            book.dd();
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Employee Details System
+Create a class Employee with properties EmployeeID, Name, Designation, and Salary. Use a constructor to initialize these properties. Write a method to display the employee's details.
+Requirements:
+● Use a constructor to initialize EmployeeID, Name, Designation, and Salary.
+● Create a method to display employee details.
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        class Employee
+        {
+            public int EmployeeID;
+            public string Name;
+            public string Designation;
+            public int Salary;
+            public Employee()
+            {
+                EmployeeID = 1;
+                Name = "Muthu";
+                Designation = "Software developer";
+                Salary = 22000;
+            }
+            public Employee(Employee employee)
+            {
+                EmployeeID = employee.EmployeeID;
+                Name = employee.Name;
+                Designation = employee.Designation;
+                Salary= employee.Salary;
+            }
+            public void dd()
+            {
+                Console.WriteLine(EmployeeID);
+                Console.WriteLine(Name);
+                Console.WriteLine(Designation);
+                Console.WriteLine(Salary);
+            }
+        }
+        static void Main(string[] args)
+        {
+            Employee emp = new Employee();
+            Employee emp2 = new Employee(emp);
+            emp.dd();
+            emp2.dd();
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
