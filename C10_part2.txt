@@ -1,0 +1,5 @@
+1. Library Book System
+Create a class Book that has properties for Title, Author, ISBN, and Price. Use a constructor to initialize these values. Implement a method to display the book details.
+Requirements:
+● Use a constructor to initialize the properties.
+● Create a method to display book details
