@@ -13,3 +13,101 @@ CalculateDiscount to provide an additional discount.
 Main Method:
 ● Creates instances of Clothing, Electronics, and Food.
 ● Displays their details and calculates their discounted prices.
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        class Product
+        {
+            public string Name;
+            public int price;
+            public string Category;
+            public int discount;
+            public int discountprice;
+            public void dd()
+            {
+                Console.WriteLine("Name          : "+Name);
+                Console.WriteLine("Price         : "+price);
+                Console.WriteLine("Category      : "+Category);
+                Console.WriteLine("discount%     : "+discount);
+            }
+            public int caldiscount()
+            {
+                discountprice= price - ((discount * price) / 100);
+                return discountprice;
+            }
+        }
+        class Clothing:Product
+        {
+            int Size;
+            string Color;
+            public void cd(string Name,int price , int dicount ,string Category)
+            {
+                this.discount = dicount;
+                this.price = price;
+                this.Category = Category;
+                this.Name = Name;
+                Size = 36;
+                Color = "black";
+                dd();
+                Console.WriteLine("size          : "+Size);
+                Console.WriteLine("Color         : "+Color);
+                Console.WriteLine("discountprice : "+caldiscount());
+                Console.WriteLine();
+            }
+        }
+        class Electronics: Product
+        {
+            string Brand;
+            int WarrantyPeriod;
+            int additionaldiscount;
+            public int adddiscount()
+            {
+                discountprice = price - (((additionaldiscount+discount) * price) / 100);
+                return discountprice;
+            }
+            public void ed(string Name, int price, int dicount, string Category)
+            {
+                this.discount = dicount;
+                this.price = price;
+                this.Category = Category;
+                this.Name = Name;
+                Brand = "Orient";
+                WarrantyPeriod = 2;
+                dd();
+                Console.WriteLine("discountprice : " + caldiscount());
+                Console.WriteLine("Brand         : " + Brand);
+                Console.WriteLine("Warrantyperiod: " + WarrantyPeriod + " years");
+                additionaldiscount = 20;
+                Console.WriteLine("adddiscount   : " + additionaldiscount);
+                Console.WriteLine("discountprice  : " + adddiscount());
+                Console.WriteLine() ;
+            }
+        } 
+        class Food: Product
+        {
+            float date;
+            public void fd(string Name, int price, int dicount, string Category)
+            {
+                this.discount = dicount;
+                this.price = price;
+                this.Category = Category;
+                this.Name = Name;
+                dd();
+                Console.WriteLine("discountprice : " + caldiscount());
+                date = 4.2025f;
+                Console.WriteLine("date : "+date);
+            }
+        }
+        static void Main(string[] args)
+        {
+            Clothing clothing = new Clothing();
+            clothing.cd("joggers", 2000, 10, "Cloths");
+            Electronics electronics = new Electronics();
+            electronics.ed("Fan", 15000, 10, "Electronics");
+            Food food = new Food();
+            food.fd("Maggie", 90, 10, "Food"
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------
