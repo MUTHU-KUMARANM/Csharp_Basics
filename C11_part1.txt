@@ -1,0 +1,15 @@
+1. Create a base class called Product with properties such as Name, Price, and Category.
+Then, create derived classes forr Clothing, Electronics, and Food, each with additional
+properties. Implement methods to display product details and calculate discounts.
+Base Class (Product):
+● Contains properties forr Name, Price, and Category.
+● Has a method DisplayDetails to print basic information and a method
+CalculateDiscount to calculate the price after applying a discount.
+Derived Classes:
+● Clothing: Adds properties Size and Color.
+● Electronics: Adds properties Brand and WarrantyPeriod, and overrides
+CalculateDiscount to provide an additional discount.
+● Food: Adds a property for ExpirationDate.
+Main Method:
+● Creates instances of Clothing, Electronics, and Food.
+● Displays their details and calculates their discounted prices.
