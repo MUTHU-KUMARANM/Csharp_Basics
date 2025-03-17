@@ -3,3 +3,35 @@ Create an interface IPayment that includes a method for processing payments and 
 Interface Definition: IPayment specifies a method for processing payments.
 Class Implementation: CreditCardPayment and PayPalPayment provide their specific implementations for processing payments.
 Using the Interface: In the Main method, we can easily switch between different payment methods without modifying the code that initiates the payment process.
+namespace ConsoleApp7
+{
+    internal class Program
+    {
+        interface Ipayment
+        {
+            void pp(int amount);
+        }
+        class Ccp:Ipayment
+        {
+            public void pp(int amount)
+            {
+                Console.WriteLine("pay amount using Ccp");
+            }
+        }
+        class Ppp
+        {
+            public void pp(int amount)
+            {
+                Console.WriteLine("Pay amount using Ppp");
+            }
+        }
+        static void Main(string[] args)
+        {
+            Ccp ccp = new Ccp();
+            ccp.pp(1);
+            Ppp pp = new Ppp(); 
+            pp.pp(1);
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
