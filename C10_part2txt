@@ -1,5 +1,0 @@
-Payment Processing System
-Create an interface IPayment that includes a method for processing payments and implement two types of payment methods: CreditCardPayment and PayPalPayment.
-Interface Definition: IPayment specifies a method for processing payments.
-Class Implementation: CreditCardPayment and PayPalPayment provide their specificimplementations for processing payments.
-Using the Interface: In the Main method, we can easily switch between different payment methods without modifying the code that initiates the payment process.
