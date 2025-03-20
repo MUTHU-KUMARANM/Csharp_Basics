@@ -1,0 +1,111 @@
+1. Create an integer array by reading inputs in run time. Read 2 positions
+from the user as input and fetch numbers from those positions. Perform
+division and display quotient and reminder. Handle necessary exceptions.
+namespace LeetCode
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                int[] arr = new int[2];
+                int q;
+                int rem;
+                Console.WriteLine("enter array elements : ");
+                try
+                {
+                    for (int i = 0; i < 2; i++)
+                    {
+                        arr[i] = int.Parse(Console.ReadLine());
+                    }
+                    q = arr[0] / arr[1];
+                    rem = arr[0] % arr[1];
+                    Console.WriteLine(q);
+                    Console.WriteLine(rem);
+                    Console.WriteLine(arr[2]);
+                }
+                catch (ArithmeticException ex)
+                {
+                    Console.WriteLine("any number is not divided by zero");
+                }
+                catch (IndexOutOfRangeException ex)
+                {
+                    Console.WriteLine("there is no such index in array");
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine("enter numbers");
+                }
+            }
+        }
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Get two integers from the user and perform division operation. Handle necessary Exceptions.
+namespace LeetCode
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("enter num1 : ");
+                    int num1 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("enter num2 : ");
+                    int num2 = int.Parse(Console.ReadLine());
+                    int div = num1 / num2;
+                    Console.WriteLine(div);
+                }
+                catch(OverflowException ex)
+                {
+                    Console.WriteLine("Enter smaller number : ");
+                }
+                catch (ArithmeticException ex)
+                {
+                    Console.WriteLine("any number is not divided by zero");
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine("enter numbers");
+                }
+            }
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Find Simple interest by reading principle amount, number of years and rate of interest as input. Handle necessary exceptions.
+namespace LeetCode
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("enter principle amount: ");
+                    double amount = int.Parse(Console.ReadLine());
+                    Console.WriteLine("enter rate of intrest : ");
+                    int r = int.Parse(Console.ReadLine());
+                    Console.WriteLine("enter number of years: ");
+                    int n = int.Parse(Console.ReadLine());
+                    double SI = (amount * n * r) / 100;
+                    Console.WriteLine(SI);
+                }
+                catch(OverflowException ex)
+                {
+                    Console.WriteLine("Enter smaller number : ");
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine("enter numbers");
+                }
+            }
+        }
+    }
+---------------------------------------------------------------------------------------------------------------------------------------------------------
