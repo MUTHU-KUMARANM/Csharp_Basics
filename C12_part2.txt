@@ -1,0 +1,117 @@
+1. Loan Eligible Checking using Throw keyword
+→ Location should be Chennai, Mumbai, Delhi or Kolkata. If any other city, raise Invalid location Error.
+→ Age should be minimum 23. If age is less than 23 Raise Invalid Age Error
+namespace LeetCode
+{
+    internal class Program
+    {
+        class CityNotFound : Exception
+        {
+            public CityNotFound()
+            {
+                Console.WriteLine("Invalid Location Error");
+            }
+        }
+        class AgeLimit : Exception
+        {
+            public AgeLimit()
+            {
+                Console.WriteLine("Invalid Location Error");
+            }
+        }
+        class City
+        { 
+            public void city(ref int flag)
+            {
+                try
+                {
+                    string[] a = { "Chennai", "Mumbai", "Delhi", "kolkata" };
+                    Console.Write("Enter a city : ");
+                    string city = Console.ReadLine();
+                    for (int i = 0; i < a.Length; i++)
+                    {
+                        if (city == a[i])
+                        {
+                            flag++;
+                        }
+                    }
+                    if (flag != 1)
+                    {
+                        throw new CityNotFound();
+                    }
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
+        class Age
+        {
+            public void ageLimt(ref int flag)
+            {
+                try
+                {
+                    Console.Write("Enter age : ");
+                    int age = int.Parse(Console.ReadLine());
+                    if (age >= 23)
+                    {
+                        flag++;
+
+                    }
+                    else
+                    {
+                        throw new AgeLimit();
+                    }
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine("enter numbers");
+                }
+                catch (OverflowException ex)
+                {
+                    Console.WriteLine("Enter smaller number");
+                }
+                catch (Exception ex)
+                {
+                   Console.WriteLine(ex.Message);                
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+
+            City city = new City();
+            Age agelimit = new Age();
+            while (true)
+            {
+                try
+                {
+                    int flag = 0;
+                    city.city(ref flag);
+                    agelimit.ageLimt(ref flag);
+                    if (flag == 2)
+                    {
+                       
+                        Console.WriteLine("your are Eligible");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not eligible");
+                    }
+                }
+                finally
+                {
+                    Console.WriteLine("thankyou");
+                }
+            }
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Create a c# program that demonstrates exception handling using custom exceptions. The program should:
+1. Define a custom exception called InsufficientFundsException.
+2. Implement a class called BankAccount with a method withdraw(double amount) that throws InsufficientFundsException if the withdrawal amount is greater
+than the current balance.
+3. Handle the custom exception in the main method and print an appropriate message.
+4. Ensure that a message is printed indicating that the transactionattempt is complete, regardless of whether an exception wasthrown.
