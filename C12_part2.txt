@@ -115,3 +115,55 @@ namespace LeetCode
 than the current balance.
 3. Handle the custom exception in the main method and print an appropriate message.
 4. Ensure that a message is printed indicating that the transactionattempt is complete, regardless of whether an exception wasthrown.
+namespace exhandling
+{
+    internal class Program
+    {
+        class InsufficientFundsException : Exception
+        {
+            public InsufficientFundsException()
+            {
+                Console.WriteLine("withdraw amount is greater than cureent balamce");
+            }
+        }
+        class Bankaccount
+        {
+            public double Cb = 1000;
+            public void withdraw(double amount)
+            {
+                if(Cb > amount )
+                {
+                    this.Cb = Cb - amount;
+                    Console.WriteLine("withdraw amount : "+amount+"cb : "+Cb);
+                }
+                else
+                {
+                    throw new InsufficientFundsException();
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            Bankaccount bankaccount = new Bankaccount();
+            try
+            {
+                Console.Write("enter amount : ");
+                double amount = int.Parse(Console.ReadLine());
+                bankaccount.withdraw(amount);
+            }
+            catch (InsufficientFundsException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch(Exception e) 
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Transaction attempet completed");
+            }
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
