@@ -1,0 +1,2 @@
+Create a program that reads a text file and counts the number of lines. Handle exceptions
+related to file operations, including file not found and access denied.
