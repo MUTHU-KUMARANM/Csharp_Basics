@@ -1,2 +1,8 @@
 Create a program that reads a text file and counts the number of lines. Handle exceptions
 related to file operations, including file not found and access denied.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a program that checks the size of a specified file and displays its properties (e.g.,
+name, size, creation date).
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Write a C# program that prompts the user to enter a series of names, saves them to a text
+file, and then reads the names back from the file.
