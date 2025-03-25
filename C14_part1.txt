@@ -1,0 +1,2 @@
+1. Write a program where a thread prints numbers from 1 to 10. Create the thread using the
+Thread class, and ensure it runs asynchronously.
