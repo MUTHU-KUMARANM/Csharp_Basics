@@ -1,2 +1,62 @@
 1. Write a program where a thread prints numbers from 1 to 10. Create the thread using the
 Thread class, and ensure it runs asynchronously.
+namespace LeetCode
+{
+    internal class Program
+    {
+        public void st()
+        {
+            int n = 10;
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine(i);
+                Thread.Sleep(500);
+            }
+        }
+        
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            Thread t1 = new Thread(program.st);
+            t1.Start();
+        }
+    }      
+} 
+------------------------------------------------------------------------------------------------------------------------------------------------
+Create a program that prints the multiplication table for a given number using multiplethreads. The user should input a number, and the program will create a 
+multiplication table for that number (up to 10) using multiple threads.
+namespace LeetCode
+{
+    internal class Program
+    {
+        public int a;
+        public void st()
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.WriteLine(i*a);
+                Thread.Sleep(500);
+            }
+        }
+        public void st1()
+        {
+            for (int i = 6; i <= 10; i++)
+            {
+                Console.WriteLine(i*a);
+                Thread.Sleep(500);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.a = 10;
+            Thread t1 = new Thread(program.st);
+            Thread t2 = new Thread(program.st1);
+            t1.Start();
+            t1.Join();
+            t2.Start();
+        }
+    }      
+}  
+----------------------------------------------------------------------------------------------------------------------------------------------------------
