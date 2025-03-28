@@ -1,1 +1,21 @@
-Create the following tables
+1)Write a program that creates a new thread and executes a method in that thread. The method should print ;Hello from thread; to the console.
+namespace multithreading
+{
+    internal class Program
+    {
+        public void newthread()
+        {
+            Console.WriteLine("Hello From thread");
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            Thread t = new Thread(program.newthread);
+            t.Start();
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+2)Create a program that uses Task to run an asynchronous method that prints numbers from 1 to 5, with a delay of 1 second between each number. The main thread should 
+also print ;Main thread running.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
