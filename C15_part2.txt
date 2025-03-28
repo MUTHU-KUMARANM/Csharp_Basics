@@ -1,0 +1,28 @@
+1)Create a program that:
+o Adds 5 numbers to a List&lt;int&gt;.
+o Prints the list before and after adding new numbers.
+o Removes a number from the list and prints the updated list.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+2)Create a program that:
+o Adds 5 key-value pairs to a Dictionary&lt;string, string&gt;.
+o Retrieves and prints a value based on a given key.
+o Removes a key-value pair from the dictionary and prints the updated dictionary.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+3)Create a program that:
+o Enqueues 5 integers into a Queue&lt;int&gt;.
+o Dequeues an item and prints the item removed from the queue.
+o Prints the remaining items in the queue.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4)Create a program that:
+o Pushes 5 integers onto a Stack&lt;int&gt;.
+o Pops an item from the stack and prints the item removed.
+o Prints the remaining items in the stack.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5)Create a program that:
+o Adds 5 integers to a HashSet&lt;int&gt;, including some duplicate values.
+o Prints the set to show how duplicates are handled.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6 )Create a program that:
+o Adds 5 key-value pairs to a SortedList&lt;string, int&gt;.
+o Prints the sorted list based on the keys.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
