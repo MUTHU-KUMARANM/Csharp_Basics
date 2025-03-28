@@ -1,0 +1,68 @@
+1)Create a stack that can:
+o Push an item onto the stack.
+o Pop an item from the stack.
+o Peek at the top item of the stack.
+o Check if the stack is empty.
+namespace collections
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<int> s = new Stack<int>();
+            s.Push(1);
+            s.Push(2);
+            foreach (int i in s)
+            {
+                Console.WriteLine(i);
+            }
+            s.Pop();
+            Console.WriteLine(s.Peek());
+            s.Pop();
+            try
+            {
+                Console.WriteLine(s.Peek());
+            }
+            catch
+            {
+                Console.WriteLine("stack is empty");
+            }
+
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+2)Create a queue that can:
+o Enqueue an item.
+o Dequeue an item.
+o Peek at the front item of the queue.
+o Check if the queue is empty.
+namespace collections
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<int> s = new Queue<int>();
+            s.Enqueue(1);
+            s.Enqueue(2);
+            foreach (int i in s)
+            {
+                Console.WriteLine(i);
+            }
+            s.Dequeue();
+            Console.WriteLine(s.Peek());
+            s.Dequeue();
+            try
+            {
+                Console.WriteLine(s.Peek());
+            }
+            catch
+            {
+                Console.WriteLine("stack is empty");
+            }
+
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------
