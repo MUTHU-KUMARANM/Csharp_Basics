@@ -1,28 +1,170 @@
 1)Create a program that:
-o Adds 5 numbers to a List&lt;int&gt;.
+o Adds 5 numbers to a List<int>.
 o Prints the list before and after adding new numbers.
 o Removes a number from the list and prints the updated list.
+namespace collections
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> s = new List<int>();
+            for(int i = 1; i <= 5; i++)
+            {
+                s.Add(i);
+                foreach(int x in s)
+                {
+                    Console.Write(x+" ");
+                }
+                Console.WriteLine();
+            }
+            s.RemoveRange(0, 3);
+            foreach(int y in s)
+            {
+                Console.Write(y+" ");
+            }
+        }
+    }
+}
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 2)Create a program that:
-o Adds 5 key-value pairs to a Dictionary&lt;string, string&gt;.
+o Adds 5 key-value pairs to a Dictionary<string, string>.
 o Retrieves and prints a value based on a given key.
 o Removes a key-value pair from the dictionary and prints the updated dictionary.
+namespace collections
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "liran";
+            Dictionary<string,string> s = new Dictionary<string,string>();
+            s.Add("CHENNAI", "muthu");
+            s.Add("kANCHIPURAM", "jai");
+            s.Add("THIRUVALLUR", "kowsi");
+            s.Add("ERODE", "mathes");
+            s.Add("MADURAI", "ragav");
+            foreach(KeyValuePair<string,string> i in s)
+            {
+                Console.WriteLine(i.Key+" "+i.Value);
+            }
+            s.Remove("ERODE");
+            Console.WriteLine();
+            foreach (KeyValuePair<string, string> i in s)
+            {
+                Console.WriteLine(i.Key + " " + i.Value);
+            }
+        }
+    }
+}
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 3)Create a program that:
-o Enqueues 5 integers into a Queue&lt;int&gt;.
+o Enqueues 5 integers into a Queue<int>.
 o Dequeues an item and prints the item removed from the queue.
 o Prints the remaining items in the queue.
+namespace collections
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Queue<int> q= new Queue<int>();
+            for(int i = 5; i >= -1; i--) {
+                q.Enqueue(i);
+            }
+            Console.WriteLine(q.Dequeue());
+            Console.WriteLine();
+            foreach (int i in q)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 4)Create a program that:
-o Pushes 5 integers onto a Stack&lt;int&gt;.
+o Pushes 5 integers onto a Stack<int>.
 o Pops an item from the stack and prints the item removed.
 o Prints the remaining items in the stack.
+namespace collections
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Stack<int> q= new Stack<int>();
+            for(int i = 5; i >= -1; i--) {
+                q.Push(i);
+            }
+            Console.WriteLine(q.Pop());
+            Console.WriteLine();
+            foreach (int i in q)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 5)Create a program that:
-o Adds 5 integers to a HashSet&lt;int&gt;, including some duplicate values.
+o Adds 5 integers to a HashSet<int>, including some duplicate values.
 o Prints the set to show how duplicates are handled.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+namespace collections
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            HashSet<int> q= new HashSet<int>();
+            for(int i = 5; i >= -1; i--) {
+                q.Add(i);
+                q.Add(i);
+            }
+            Console.WriteLine(q.Remove(5));
+            Console.WriteLine();
+            foreach (int i in q)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 6 )Create a program that:
-o Adds 5 key-value pairs to a SortedList&lt;string, int&gt;.
+o Adds 5 key-value pairs to a SortedList<string, int>.
 o Prints the sorted list based on the keys.
+namespace collections
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string a = "liran";
+            SortedList<string, string> s = new SortedList<string, string>();
+            s.Add("CHENNAI", "muthu");
+            s.Add("kANCHIPURAM", "jai");
+            s.Add("THIRUVALLUR", "kowsi");
+            s.Add("ERODE", "mathes");
+            s.Add("MADURAI", "ragav");
+            foreach (KeyValuePair<string, string> i in s)
+            {
+                Console.WriteLine(i.Key + " " + i.Value);
+            }
+            s.Remove("ERODE");
+            Console.WriteLine();
+            foreach (KeyValuePair<string, string> i in s)
+            {
+                Console.WriteLine(i.Key + " " + i.Value);
+            }
+        }
+    }
+}
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
