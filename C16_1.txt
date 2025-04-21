@@ -1,0 +1,22 @@
+1)Create a program that:
+o Defines a list of integers.
+o Uses LINQ to filter out all even numbers.
+o Sorts the filtered numbers in descending order.
+o Projects the numbers into a string format and prints them.
+namespace C16_1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World!");
+            List<int> num = new List<int> { 1, 2, 3, 4, 5 };
+            var obj = from n in num where n% 2 == 0 select n;
+            foreach(object item in obj)
+            {
+                Console.WriteLine(item.ToString()+" ");
+            }
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
