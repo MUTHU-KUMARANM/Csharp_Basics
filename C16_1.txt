@@ -19,4 +19,54 @@ namespace C16_1
         }
     }
 }
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2)Create a program that:
+o Defines a list of Student objects with properties Name, Age, and Grade.
+o Uses LINQ to group students by their Grade.
+o Prints the students in each group
+namespace C16_1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Students> students = new List<Students>
+            {
+                new Students {Name="Kani",age= 22,grade='C' },
+                new Students {Name="Muthu",age=22,grade='B' },
+                new Students {Name="Mari",age= 22,grade='A' },
+                new Students {Name="Uma",age= 22,grade='A' },
+                new Students {Name="Jai",age= 22,grade='B' },
+                new Students {Name="Kowsi",age= 22,grade='A' },
+                new Students {Name="Mathesh",age= 22,grade='A' },
+                new Students {Name="Sangavi",age= 22,grade='A' },
+                new Students {Name="Ragav",age= 22,grade='C' },
+                new Students {Name="Swetha",age= 22,grade='A' },
+                new Students {Name="Ganesh",age= 22,grade='C' },
+                new Students {Name="Raj",age= 22,grade='A' },
+                new Students {Name="Poornima",age= 22,grade='B' },
+            };
+            var obj = from s in students
+                          group s by s.grade;
+
+            foreach (var group in obj)
+            {
+                Console.WriteLine(group.Key);
+                foreach (var student in group)
+                {
+                    Console.WriteLine(student.Name+" "+student.age);
+                }
+            }
+        }
+    }
+}
+namespace C16_1
+{
+    internal class Students
+    {
+        public string ? Name { get; set; }
+        public int age { get; set; }
+        public char grade { get; set; }
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
